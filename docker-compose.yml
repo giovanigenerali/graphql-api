@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  mongodb:
+    image: mongo:latest
+    environment:
+      AUTH: "no"
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  mongodb:
